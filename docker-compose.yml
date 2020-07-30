@@ -24,6 +24,8 @@ services:
       context: .
       dockerfile: ./docker/web/Dockerfile
     container_name: keyshare_web
+    volumes:
+      - ./src:/irma_keyshare_server/src
     stdin_open: true
     tty: true
     restart: unless-stopped
